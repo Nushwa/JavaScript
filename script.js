@@ -1,5 +1,5 @@
 'use strict';
-
+//Testing
 const player0 = document.querySelector('.player--0');
 const player1 = document.querySelector('.player--1');
 
@@ -13,7 +13,7 @@ const rollbtn = document.querySelector('.btn--roll');
 const newBtn = document.querySelector('.btn--new');
 const holdBtn = document.querySelector('.btn--hold');
 
-const SwitchPlayer = function() {
+const SwitchPlayer = function () {
     document.getElementById(`current--${activePlayer}`).textContent = 0;
     currentScore = 0;
     activePlayer = activePlayer === 0 ? 1 : 0;
@@ -23,7 +23,7 @@ const SwitchPlayer = function() {
 
 let scores, currentScore, activePlayer, playing;
 
-const initialize = function() {
+const initialize = function () {
 
     scores = [0, 0];
     currentScore = 0;
@@ -45,7 +45,7 @@ const initialize = function() {
 }
 initialize();
 
-rollbtn.addEventListener('click', function() {
+rollbtn.addEventListener('click', function () {
     if (playing) {
         //random dice roll
         let ranDice = Math.trunc(Math.random() * 6) + 1;
@@ -65,7 +65,7 @@ rollbtn.addEventListener('click', function() {
     }
 })
 
-holdBtn.addEventListener('click', function() {
+holdBtn.addEventListener('click', function () {
     if (playing) {
         //Add curretn score to active player
         scores[activePlayer] += currentScore;
